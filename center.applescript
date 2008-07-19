@@ -44,7 +44,7 @@ tell application "System Events"
     on error
       set {w, h} to {0, 0}
     end try
-    set position of window 1 to {((screen_width - windowWidth - w) / 2), ((screen_height - windowHeight) / 2.0) - desktopTop}
-    set size of window 1 to {windowWidth, windowHeight}
+    set position of window 1 to {((screen_width - windowWidth) / 2), ((screen_height - windowHeight) / 2.0) - desktopTop}
+    set size of window 1 to {windowWidth -w, windowHeight}
   end tell
 end tell
